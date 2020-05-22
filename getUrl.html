@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <h1>欢迎老铁</h1> -->
+    <ul id="ul">
+
+    </ul>
+    <script src="./js/index.js"></script>
+    <script>
+        // 获取链接参数案例
+        let ul = document.getElementById("ul");
+        let _url = queryString(this.location.href);
+        let queryObj = "";
+        for (let key in _url) {
+            queryObj += `<li>对应的key：` + key + "<br/>对应的value：" + _url[key] + `</li><br/>`
+        }
+        ul.innerHTML = queryObj
+
+
+    </script>
+</body>
+
+</html>
